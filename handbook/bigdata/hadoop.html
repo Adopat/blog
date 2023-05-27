@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第一章 Hadoop | Adopat的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/blog/logo.jpeg">
+    <link rel="manifest" href="/blog/logo.jpeg">
+    <link rel="apple-touch-icon" href="/blog/logo.jpeg">
+    <link rel="mask-icon" href="/blog/logo.jpeg" color="#3eaf7c">
+    <meta name="description" content="长路漫漫，唯键作伴">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="expires" cotent="0">
+    <meta http-quiv="pragma" cotent="no-cache, must-revalidate">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta charset="utf-8">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.c74f429a.css" as="style"><link rel="preload" href="/blog/assets/js/app.610bec8c.js" as="script"><link rel="preload" href="/blog/assets/js/3.1aae9359.js" as="script"><link rel="preload" href="/blog/assets/js/1.ae8a88ec.js" as="script"><link rel="preload" href="/blog/assets/js/43.756910ba.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.d3b9c11d.js"><link rel="prefetch" href="/blog/assets/js/11.acb152df.js"><link rel="prefetch" href="/blog/assets/js/12.470ef64a.js"><link rel="prefetch" href="/blog/assets/js/13.2f9f6521.js"><link rel="prefetch" href="/blog/assets/js/14.c92e8efe.js"><link rel="prefetch" href="/blog/assets/js/15.b18942b8.js"><link rel="prefetch" href="/blog/assets/js/16.151c3f78.js"><link rel="prefetch" href="/blog/assets/js/17.d10562a5.js"><link rel="prefetch" href="/blog/assets/js/18.eb44c7ad.js"><link rel="prefetch" href="/blog/assets/js/19.bb1e396b.js"><link rel="prefetch" href="/blog/assets/js/20.25362341.js"><link rel="prefetch" href="/blog/assets/js/21.b67291e2.js"><link rel="prefetch" href="/blog/assets/js/22.ba03c095.js"><link rel="prefetch" href="/blog/assets/js/23.8123f58b.js"><link rel="prefetch" href="/blog/assets/js/24.53c3aa47.js"><link rel="prefetch" href="/blog/assets/js/25.b9cb3f8a.js"><link rel="prefetch" href="/blog/assets/js/26.b8f7d65f.js"><link rel="prefetch" href="/blog/assets/js/27.ae6c1b55.js"><link rel="prefetch" href="/blog/assets/js/28.6949fbc1.js"><link rel="prefetch" href="/blog/assets/js/29.0ef9290f.js"><link rel="prefetch" href="/blog/assets/js/30.3fa8937a.js"><link rel="prefetch" href="/blog/assets/js/31.73343ecd.js"><link rel="prefetch" href="/blog/assets/js/32.b5057d00.js"><link rel="prefetch" href="/blog/assets/js/33.d586eaa2.js"><link rel="prefetch" href="/blog/assets/js/34.586451e0.js"><link rel="prefetch" href="/blog/assets/js/35.65421733.js"><link rel="prefetch" href="/blog/assets/js/36.fddf6df2.js"><link rel="prefetch" href="/blog/assets/js/37.6089941c.js"><link rel="prefetch" href="/blog/assets/js/38.ef6799db.js"><link rel="prefetch" href="/blog/assets/js/39.2075b5fb.js"><link rel="prefetch" href="/blog/assets/js/4.1dd123be.js"><link rel="prefetch" href="/blog/assets/js/40.f5520796.js"><link rel="prefetch" href="/blog/assets/js/41.a23e6477.js"><link rel="prefetch" href="/blog/assets/js/42.1ad13e0e.js"><link rel="prefetch" href="/blog/assets/js/44.e50bce95.js"><link rel="prefetch" href="/blog/assets/js/45.96aaada5.js"><link rel="prefetch" href="/blog/assets/js/46.f656cba5.js"><link rel="prefetch" href="/blog/assets/js/47.585627a1.js"><link rel="prefetch" href="/blog/assets/js/48.3a0d1863.js"><link rel="prefetch" href="/blog/assets/js/49.8bb9ae1d.js"><link rel="prefetch" href="/blog/assets/js/5.4cb445b4.js"><link rel="prefetch" href="/blog/assets/js/50.8fe0802a.js"><link rel="prefetch" href="/blog/assets/js/51.990005e0.js"><link rel="prefetch" href="/blog/assets/js/52.d3e7eb58.js"><link rel="prefetch" href="/blog/assets/js/53.b206d21c.js"><link rel="prefetch" href="/blog/assets/js/54.6744e1e3.js"><link rel="prefetch" href="/blog/assets/js/55.06c08cd8.js"><link rel="prefetch" href="/blog/assets/js/56.e6e08c1b.js"><link rel="prefetch" href="/blog/assets/js/57.7074e0b1.js"><link rel="prefetch" href="/blog/assets/js/58.9515d0c5.js"><link rel="prefetch" href="/blog/assets/js/59.76b52863.js"><link rel="prefetch" href="/blog/assets/js/6.e02ce0fc.js"><link rel="prefetch" href="/blog/assets/js/60.2c726cb5.js"><link rel="prefetch" href="/blog/assets/js/61.43ad8952.js"><link rel="prefetch" href="/blog/assets/js/62.4a7cd352.js"><link rel="prefetch" href="/blog/assets/js/63.12563cfb.js"><link rel="prefetch" href="/blog/assets/js/64.60f87b12.js"><link rel="prefetch" href="/blog/assets/js/65.7520babe.js"><link rel="prefetch" href="/blog/assets/js/66.4183a654.js"><link rel="prefetch" href="/blog/assets/js/67.9464cb6a.js"><link rel="prefetch" href="/blog/assets/js/68.efd390cb.js"><link rel="prefetch" href="/blog/assets/js/69.6db70a9b.js"><link rel="prefetch" href="/blog/assets/js/7.3df43e48.js"><link rel="prefetch" href="/blog/assets/js/70.d7796ea5.js"><link rel="prefetch" href="/blog/assets/js/71.6708489c.js"><link rel="prefetch" href="/blog/assets/js/72.864ce868.js"><link rel="prefetch" href="/blog/assets/js/73.55595866.js"><link rel="prefetch" href="/blog/assets/js/74.f0d3a7b1.js"><link rel="prefetch" href="/blog/assets/js/8.417a4fef.js"><link rel="prefetch" href="/blog/assets/js/9.1084ce88.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.c74f429a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1c636796><div data-v-1c636796><div class="password-shadow password-wrapper-out" style="display:none;" data-v-2c3e9f55 data-v-1c636796 data-v-1c636796><h3 class="title" data-v-2c3e9f55>Adopat的博客</h3> <p class="description" data-v-2c3e9f55>长路漫漫，唯键作伴</p> <label id="box" class="inputBox" data-v-2c3e9f55><input type="password" value="" data-v-2c3e9f55> <span data-v-2c3e9f55>Konck! Knock!</span> <button data-v-2c3e9f55>OK</button></label> <div class="footer" data-v-2c3e9f55><span data-v-2c3e9f55><i class="iconfont reco-theme" data-v-2c3e9f55></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-2c3e9f55>vuePress-theme-reco</a></span> <span data-v-2c3e9f55><i class="iconfont reco-copyright" data-v-2c3e9f55></i> <a data-v-2c3e9f55><span data-v-2c3e9f55>Adopat</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-1c636796><header class="navbar" data-v-1c636796><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.jpeg" alt="Adopat的博客" class="logo"> <span class="site-name">Adopat的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  HOME
+</a></div><div class="nav-item"><a href="/blog/handbook/about/" class="nav-link"><i class="iconfont reco-document"></i>
+  导读
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/handbook/basic/composition-principle.html" class="nav-link"><i class="fa fa-solid fa-computer"></i>
+  计算机基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/frontend/basic.html" class="nav-link"><i class="fa fa-brands fa-js"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/backend/java-core-basic.html" class="nav-link"><i class="fa fa-brands fa-java"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/bigdata/hadoop.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="fa fa-solid fa-database"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/ml/python-core.html" class="nav-link"><i class="fa fa-brands fa-python"></i>
+  人工智能
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/devops/docker.html" class="nav-link"><i class="fa fa-brands fa-docker"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/tools/Git.html" class="nav-link"><i class="fa fa-solid fa-toolbox"></i>
+  常用开发工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      友情链接
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/weixin_44446122?type=blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Adopat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1c636796></div> <aside class="sidebar" data-v-1c636796><div class="personal-info-wrapper" data-v-6f92ba70 data-v-1c636796><!----> <h3 class="name" data-v-6f92ba70>
+    Adopat
+  </h3> <div class="num" data-v-6f92ba70><div data-v-6f92ba70><h3 data-v-6f92ba70>63</h3> <h6 data-v-6f92ba70>文章</h6></div> <div data-v-6f92ba70><h3 data-v-6f92ba70>0</h3> <h6 data-v-6f92ba70>标签</h6></div></div> <ul class="social-links" data-v-6f92ba70></ul> <hr data-v-6f92ba70></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  HOME
+</a></div><div class="nav-item"><a href="/blog/handbook/about/" class="nav-link"><i class="iconfont reco-document"></i>
+  导读
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/handbook/basic/composition-principle.html" class="nav-link"><i class="fa fa-solid fa-computer"></i>
+  计算机基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/frontend/basic.html" class="nav-link"><i class="fa fa-brands fa-js"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/backend/java-core-basic.html" class="nav-link"><i class="fa fa-brands fa-java"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/bigdata/hadoop.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="fa fa-solid fa-database"></i>
+  大数据
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/ml/python-core.html" class="nav-link"><i class="fa fa-brands fa-python"></i>
+  人工智能
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/devops/docker.html" class="nav-link"><i class="fa fa-brands fa-docker"></i>
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog/handbook/tools/Git.html" class="nav-link"><i class="fa fa-solid fa-toolbox"></i>
+  常用开发工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      友情链接
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/weixin_44446122?type=blog" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Adopat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>大数据基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/handbook/bigdata/hadoop.html" aria-current="page" class="active sidebar-link">第一章 Hadoop</a></li><li><a href="/blog/handbook/bigdata/hdfs.html" class="sidebar-link">第二章 HDFS</a></li><li><a href="/blog/handbook/bigdata/mapreduce.html" class="sidebar-link">第三章 MapReduce</a></li><li><a href="/blog/handbook/bigdata/mapreduce1.html" class="sidebar-link">第四章 MapReduce性能优化</a></li><li><a href="/blog/handbook/bigdata/yarn.html" class="sidebar-link">第五章 YARN</a></li><li><a href="/blog/handbook/bigdata/flume.html" class="sidebar-link">第六章 Flume</a></li><li><a href="/blog/handbook/bigdata/hive.html" class="sidebar-link">第七章 HIVE</a></li><li><a href="/blog/handbook/bigdata/scala.html" class="sidebar-link">第八章 Scala</a></li><li><a href="/blog/handbook/bigdata/spark.html" class="sidebar-link">第九章 Spark</a></li><li><a href="/blog/handbook/bigdata/flink.html" class="sidebar-link">第十章 Flink</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>大数据进阶</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-2c3e9f55 data-v-1c636796><h3 class="title" data-v-2c3e9f55></h3> <!----> <label id="box" class="inputBox" data-v-2c3e9f55><input type="password" value="" data-v-2c3e9f55> <span data-v-2c3e9f55>Konck! Knock!</span> <button data-v-2c3e9f55>OK</button></label> <div class="footer" data-v-2c3e9f55><span data-v-2c3e9f55><i class="iconfont reco-theme" data-v-2c3e9f55></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-2c3e9f55>vuePress-theme-reco</a></span> <span data-v-2c3e9f55><i class="iconfont reco-copyright" data-v-2c3e9f55></i> <a data-v-2c3e9f55><span data-v-2c3e9f55>Adopat</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-1c636796><div data-v-1c636796><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">第一章 Hadoop</h1> <div data-v-6acedb3b><i class="iconfont reco-account" data-v-6acedb3b><span data-v-6acedb3b>Adopat</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="第一章-hadoop"><a href="#第一章-hadoop" class="header-anchor">#</a> 第一章 Hadoop</h1> <h2 id="_1-1-hadoop-简介"><a href="#_1-1-hadoop-简介" class="header-anchor">#</a> 1.1 Hadoop 简介</h2> <p>Hadoop 是一个适合海量数据的<strong>分布式存储</strong>和<strong>分布式计算</strong>的框架。</p> <blockquote><p>这里的<strong>分布式存储</strong>指的是<strong>HDFS</strong> ；<strong>分布式计算</strong>指的是<strong>MapReduce</strong></p></blockquote> <h3 id="_1-1-1-hadoop-版本"><a href="#_1-1-1-hadoop-版本" class="header-anchor">#</a> 1.1.1 Hadoop 版本</h3> <ul><li>Hadoop1.x HDFS+MapReduce</li> <li>Hadoop2.x HDFS+YARN+MapReduce</li> <li>Hadoop3.x HDFS+YARN+MapReduce</li></ul> <h3 id="_1-1-2-hadoop3-x的细节变化"><a href="#_1-1-2-hadoop3-x的细节变化" class="header-anchor">#</a> 1.1.2 Hadoop3.x的细节变化</h3> <ol><li><p>最低的Java版本要求从Java7变为Java8</p></li> <li><p>在Hadoop 3中，HDFS支持纠删码，纠删码是一种比副本存储更节省存储空间的数据持久化存储方法，使用这种方法，相同容错的情况下可以比之前节省一半的存储空间</p> <blockquote><p>https://hadoop.apache.org/docs/r3.0.0/hadoop-project-dist/hadoop-hdfs/HDFSErasureCoding.html</p></blockquote></li> <li><p>Hadoop 2中的HDFS最多支持两个NameNode，一主一备，而Hadoop 3中的HDFS支持多个NameNode，一主多备</p> <blockquote><p>https://hadoop.apache.org/docs/r3.0.0/hadoop-project-dist/hadoop-hdfs/HDFSErasureCoding.html</p></blockquote></li> <li><p>MapReduce任务级本地优化，MapReduce添加了映射输出收集器的本地化实现的支持。对于密集型的洗牌操作（shuffle-intensive）jobs，可以带来30%的性能提升，</p> <blockquote><p>https://issues.apache.org/jira/browse/MAPREDUCE-2841</p></blockquote></li> <li><p>修改了多重服务的默认端口，Hadoop2中一些服务的端口和Hadoop3中是不一样的</p></li> <li><p>详细优化点参考 https://hadoop.apache.org/docs/r3.0.0/index.html</p></li></ol> <h3 id="_1-1-3-常见的hadoop发行版本"><a href="#_1-1-3-常见的hadoop发行版本" class="header-anchor">#</a> 1.1.3 常见的Hadoop发行版本</h3> <ul><li>Cloudera Hadoop(CDH) 收费商用版本</li> <li>HortonWorks(HDP)  开源版本，互联网公司使用较多</li> <li>Apache Hadoop 官方原生版本</li></ul> <h3 id="_1-1-4-hadoop-三大核心组件"><a href="#_1-1-4-hadoop-三大核心组件" class="header-anchor">#</a> 1.1.4 Hadoop 三大核心组件</h3> <ul><li>HDFS 负责海里数据的分布式存储</li> <li>MapReduce 是一个计算模型，负责海量数据的分布式计算</li> <li>YARN 负责集群资源的管理和调度</li></ul> <h2 id="_1-2-hadoop-安装"><a href="#_1-2-hadoop-安装" class="header-anchor">#</a> 1.2 Hadoop 安装</h2> <h3 id="_1-2-1-hadoop集群的进程"><a href="#_1-2-1-hadoop集群的进程" class="header-anchor">#</a> 1.2.1 Hadoop集群的进程</h3> <ul><li>HDFS服务进程
+<ul><li>NameNode</li> <li>SecondaryNameNode</li> <li>DataNode</li></ul></li> <li>YARN服务进程
+<ul><li>ResourceManager</li> <li>NodeManager</li></ul></li></ul> <blockquote><p>MapRedcue在这里没有进程，因为它是一个计算框架，等Hadoop集群安装好了以后MapReduce程序可以在上面执行。</p></blockquote> <h3 id="_1-2-1-伪分布式集群安装"><a href="#_1-2-1-伪分布式集群安装" class="header-anchor">#</a> 1.2.1 伪分布式集群安装</h3> <ol><li><p>首先配置基础环境 ip,hostname,firewalld,ssh免密码登录,JDK</p> <ul><li><p>ip</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/sysconfig/network-scripts/ifcfg-ens33 </span>
+<span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;Ethernet&quot;</span>
+<span class="token assign-left variable">PROXY_METHOD</span><span class="token operator">=</span><span class="token string">&quot;none&quot;</span>
+<span class="token assign-left variable">BROWSER_ONLY</span><span class="token operator">=</span><span class="token string">&quot;no&quot;</span>
+<span class="token assign-left variable">BOOTPROTO</span><span class="token operator">=</span><span class="token string">&quot;static&quot;</span>
+<span class="token assign-left variable">DEFROUTE</span><span class="token operator">=</span><span class="token string">&quot;yes&quot;</span>
+<span class="token assign-left variable">IPV4_FAILURE_FATAL</span><span class="token operator">=</span><span class="token string">&quot;no&quot;</span>
+<span class="token assign-left variable">IPV6INIT</span><span class="token operator">=</span><span class="token string">&quot;yes&quot;</span>
+<span class="token assign-left variable">IPV6_AUTOCONF</span><span class="token operator">=</span><span class="token string">&quot;yes&quot;</span>
+<span class="token assign-left variable">IPV6_DEFROUTE</span><span class="token operator">=</span><span class="token string">&quot;yes&quot;</span>
+<span class="token assign-left variable">IPV6_FAILURE_FATAL</span><span class="token operator">=</span><span class="token string">&quot;no&quot;</span>
+<span class="token assign-left variable">IPV6_ADDR_GEN_MODE</span><span class="token operator">=</span><span class="token string">&quot;stable-privacy&quot;</span>
+<span class="token assign-left variable">NAME</span><span class="token operator">=</span><span class="token string">&quot;ens33&quot;</span>
+<span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;2bc41e60-ba09-4989-b408-3b40b89378e7&quot;</span>
+<span class="token assign-left variable">DEVICE</span><span class="token operator">=</span><span class="token string">&quot;ens33&quot;</span>
+<span class="token assign-left variable">ONBOOT</span><span class="token operator">=</span><span class="token string">&quot;yes&quot;</span>
+<span class="token assign-left variable">IPADDR</span><span class="token operator">=</span><span class="token number">192.168</span>.35.103
+<span class="token assign-left variable">GATEWAY</span><span class="token operator">=</span><span class="token number">192.168</span>.35.2
+<span class="token assign-left variable">DNS1</span><span class="token operator">=</span><span class="token number">192.168</span>.35.2
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><blockquote><p>修改项</p> <p>BOOTPROTO=&quot;static&quot;</p> <p>IPADDR=192.168.35.103
+GATEWAY=192.168.35.2
+DNS1=192.168.35.2</p></blockquote></li> <li><p>hostname</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># hostname</span>
+bigdata04
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/hostname</span>
+bigdata04
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>firewalld</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 临时关闭防火墙</span>
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># systemctl stop firewalld</span>
+<span class="token comment"># 永久关闭防火墙</span>
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># systemctl disable firewalld</span>
+<span class="token comment"># 查看防火墙状态</span>
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># systemctl status firewalld   </span>
+● firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded <span class="token punctuation">(</span>/usr/lib/systemd/system/firewalld.service<span class="token punctuation">;</span> disabled<span class="token punctuation">;</span> vendor preset: enabled<span class="token punctuation">)</span>
+   Active: inactive <span class="token punctuation">(</span>dead<span class="token punctuation">)</span>
+     Docs: man:firewalld<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+Dec <span class="token number">27</span> <span class="token number">14</span>:05:34 bigdata04 systemd<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: Starting firewalld - dynamic firew<span class="token punctuation">..</span><span class="token punctuation">..</span>
+Dec <span class="token number">27</span> <span class="token number">14</span>:05:34 bigdata04 systemd<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: Started firewalld - dynamic firewa<span class="token punctuation">..</span><span class="token punctuation">..</span>
+Dec <span class="token number">27</span> <span class="token number">14</span>:19:41 bigdata04 systemd<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: Stopping firewalld - dynamic firew<span class="token punctuation">..</span><span class="token punctuation">..</span>
+Dec <span class="token number">27</span> <span class="token number">14</span>:19:42 bigdata04 systemd<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: Stopped firewalld - dynamic firewa<span class="token punctuation">..</span><span class="token punctuation">..</span>
+Hint: Some lines were ellipsized, use <span class="token parameter variable">-l</span> to show <span class="token keyword">in</span> full.
+<span class="token comment"># 确认开机不启动防火墙</span>
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># systemctl list-unit-files | grep firewalld</span>
+firewalld.service                             disabled
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li> <li><p>ssh 免密码登录</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 生成公钥和私钥文件</span>
+ssh-keygen <span class="token parameter variable">-t</span> rsa
+<span class="token comment"># 将公钥拷贝到要登录的主机</span>
+<span class="token function">cat</span> ~/.ssh/id_rsa.pub <span class="token operator">&gt;&gt;</span> ~/.ssh/authorized_keys
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># ll ~/.ssh </span>
+total <span class="token number">16</span>
+-rw-r--r--. <span class="token number">1</span> root root  <span class="token number">396</span> Jan  <span class="token number">5</span> <span class="token number">13</span>:52 authorized_keys
+-rw-------. <span class="token number">1</span> root root <span class="token number">1679</span> Jan  <span class="token number">5</span> <span class="token number">13</span>:51 id_rsa
+-rw-r--r--. <span class="token number">1</span> root root  <span class="token number">396</span> Jan  <span class="token number">5</span> <span class="token number">13</span>:51 id_rsa.pub
+-rw-r--r--. <span class="token number">1</span> root root  <span class="token number">203</span> Jan  <span class="token number">5</span> <span class="token number">13</span>:52 known_hosts
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li> <li><p>JDK安装</p> <ul><li><p>解压JDK压缩文件</p></li> <li><p>配置环境变量</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 1.vi /etc/profile 增加JDK环境信息</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/data/soft/jdk1.8
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>.:<span class="token variable">$JAVA_HOME</span>/bin:<span class="token environment constant">$PATH</span>
+<span class="token comment"># 2.验证JDK 安装是否成功</span>
+<span class="token punctuation">[</span>root@bigdata04 ~<span class="token punctuation">]</span><span class="token comment"># java -version</span>
+<span class="token function">java</span> version <span class="token string">&quot;1.8.0_311&quot;</span>
+Java<span class="token punctuation">(</span>TM<span class="token punctuation">)</span> SE Runtime Environment <span class="token punctuation">(</span>build <span class="token number">1.8</span>.0_311-b11<span class="token punctuation">)</span>
+Java HotSpot<span class="token punctuation">(</span>TM<span class="token punctuation">)</span> <span class="token number">64</span>-Bit Server VM <span class="token punctuation">(</span>build <span class="token number">25.311</span>-b11, mixed mode<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><blockquote><p>source /etc/profile 配置完重新加载配置文件 使环境变量生效</p></blockquote></li></ul></li></ul></li> <li><p>安装Hadoop</p> <ul><li><p>解压Hadoop安装文件</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 soft<span class="token punctuation">]</span><span class="token comment"># tar -zxvf hadoop-3.2.0.tar.gz </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li> <li><p>修改配置文件</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/data/soft/hadoop-3.2.0/etc/hadoop
+<span class="token comment"># 第一步 修改 hadoop-env.sh</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># vi hadoop-env.sh</span>
+<span class="token comment"># 指定Java安装的目录</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/data/soft/jdk1.8
+<span class="token comment"># Hadoop 的日志存放目录</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HADOOP_LOG_DIR</span><span class="token operator">=</span>/data/hadoop_repo/logs/hadoop
+<span class="token comment"># 第二步 修改 core-site.xml</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># vi core-site.xml</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>fs.defaultFS<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>hdfs://bigdata04:900<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>/value<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>hadoop.tmp.dir<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>/data/hadoop_repo<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 第三步 修改 mapred-site.xml，设置mapreduce使用的资源调度框架</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># vi mapred-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>mapreduce.framework.name<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>yarn<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 第四步 修改 yarn-site.xml，设置yarn上支持运行的服务和环境变量白名单</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># vi yarn-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>yarn.nodemanager.aux-services<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>mapreduce_shuffle<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>yarn.nodemanager.env-whitelist<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>    		  <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 第五步 修改 workers，设置集群中从节点的主机名信息，在这里就一台集群，所以就填写bigdata04即可</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># vi workers</span>
+bigdata04
+<span class="token comment"># 第六步 修改 sbin 目录下 start-dfs.sh 增加用户</span>
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/data/soft/hadoop-3.2.0/sbin
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># vi start-dfs.sh </span>
+<span class="token assign-left variable">HDFS_DATANODE_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HDFS_DATANODE_SECURE_USER</span><span class="token operator">=</span>hdfs 
+<span class="token assign-left variable">HDFS_NAMENODE_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HDFS_SECONDARYNAMENODE_USER</span><span class="token operator">=</span>root
+<span class="token comment"># 第七步 修改 sbin 目录下 stop-dfs.sh 增加用户</span>
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/data/soft/hadoop-3.2.0/sbin
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># vi start-dfs.sh </span>
+<span class="token assign-left variable">HDFS_DATANODE_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HDFS_DATANODE_SECURE_USER</span><span class="token operator">=</span>hdfs 
+<span class="token assign-left variable">HDFS_NAMENODE_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HDFS_SECONDARYNAMENODE_USER</span><span class="token operator">=</span>root
+<span class="token comment"># 第八步修改sbin 目录下 start-yarn.sh</span>
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># vi start-yarn.sh </span>
+<span class="token assign-left variable">YARN_RESOURCEMANAGER_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HADOOP_SECURE_DN_USER</span><span class="token operator">=</span>yarn 
+<span class="token assign-left variable">YARN_NODEMANAGER_USER</span><span class="token operator">=</span>root
+<span class="token comment"># 第九步 修改sbin 目录下 stop-yarn.sh</span>
+<span class="token punctuation">[</span>root@bigdata04 sbin<span class="token punctuation">]</span><span class="token comment"># vi stop-yarn.sh </span>
+<span class="token assign-left variable">YARN_RESOURCEMANAGER_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HADOOP_SECURE_DN_USER</span><span class="token operator">=</span>yarn 
+<span class="token assign-left variable">YARN_NODEMANAGER_USER</span><span class="token operator">=</span>root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div></li> <li><p>格式化HDFS</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 hadoop<span class="token punctuation">]</span><span class="token comment"># cd /data/soft/hadoop-3.2.0</span>
+<span class="token punctuation">[</span>root@bigdata04 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># bin/hdfs namenode -format</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>启动伪分布集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># sbin/start-all.sh</span>
+Starting namenodes on <span class="token punctuation">[</span>bigdata04<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">10</span>:07:25 CST <span class="token number">2022</span> from fe80::214d:f5bf:36e9:dae8%ens33 on pts/1
+Starting datanodes
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:19:17 CST <span class="token number">2022</span> on pts/1
+Starting secondary namenodes <span class="token punctuation">[</span>bigdata04<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:19:19 CST <span class="token number">2022</span> on pts/1
+Starting resourcemanager
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:19:23 CST <span class="token number">2022</span> on pts/1
+Starting nodemanagers
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:19:31 CST <span class="token number">2022</span> on pts/1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li> <li><p>验证集群是否启动</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">4530</span> ResourceManager
+<span class="token number">4004</span> NameNode
+<span class="token number">4122</span> DataNode
+<span class="token number">5034</span> Jps
+<span class="token number">4284</span> SecondaryNameNode
+<span class="token number">4685</span> NodeManager
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><blockquote><p>除jps进程外有5个进程说明安装成功</p></blockquote> <p>此外通过web ui 也可以验证安装是否成功</p> <p>HDFS webui界面：
+http://192.168.35.103:9870</p> <p><img src="/blog/Hadoop%E7%94%9F%E6%80%81%E4%BD%93%E7%B3%BB.assets/image-20220111150258393.png" alt="image-20220111150258393"></p> <p>YARN webui界面：
+http://192.168.35.103:8088(这个IP为bigdata04主机IP，如果想使用主机名访问需要在windows配置host)</p> <p><img src="/blog/Hadoop%E7%94%9F%E6%80%81%E4%BD%93%E7%B3%BB.assets/image-20220107112649396.png" alt="image-20220107112649396"></p></li> <li><p>停止集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata04 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># sbin/stop-all.sh </span>
+Stopping namenodes on <span class="token punctuation">[</span>bigdata04<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:19:33 CST <span class="token number">2022</span> on pts/1
+Stopping datanodes
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:27:24 CST <span class="token number">2022</span> on pts/1
+Stopping secondary namenodes <span class="token punctuation">[</span>bigdata04<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:27:25 CST <span class="token number">2022</span> on pts/1
+Stopping nodemanagers
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:27:27 CST <span class="token number">2022</span> on pts/1
+Stopping resourcemanager
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">11</span>:27:30 CST <span class="token number">2022</span> on pts/1
+<span class="token punctuation">[</span>root@bigdata04 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">6312</span> Jps
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li></ul></li></ol> <h3 id="_1-2-2-分布式集群安装"><a href="#_1-2-2-分布式集群安装" class="header-anchor">#</a> 1.2.2  分布式集群安装</h3> <p>在这里我们要配置一主两从的分布式集群,准备三个节点</p> <ul><li>bigdata01:192.168.35.100</li> <li>bigdata02:192.168.35.101</li> <li>bigdata03:192.168.25.102</li></ul> <ol><li><p>前置配置</p> <p>需要把每个节点的基础环境配置好，先把ip,hostname,firewalld,ssh免密码登录配置好</p></li> <li><p>Hadoop安装</p> <ol><li><p>配置三台主机的/etc/host</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 修改bigdata01的/etc/host</span>
+<span class="token punctuation">[</span>root@bigdata01 ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/hosts </span>
+<span class="token number">192.168</span>.35.100 bigdata01 
+<span class="token number">192.168</span>.35.101 bigdata02 
+<span class="token number">192.168</span>.35.102 bigdata03
+<span class="token comment"># 修改bigdata02的/etc/host</span>
+<span class="token punctuation">[</span>root@bigdata02 ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/hosts </span>
+<span class="token number">192.168</span>.35.100 bigdata01 
+<span class="token number">192.168</span>.35.101 bigdata02 
+<span class="token number">192.168</span>.35.102 bigdata03
+<span class="token comment"># 修改bigdata03的/etc/host</span>
+<span class="token punctuation">[</span>root@bigdata03 ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/hosts </span>
+<span class="token number">192.168</span>.35.100 bigdata01 
+<span class="token number">192.168</span>.35.101 bigdata02 
+<span class="token number">192.168</span>.35.102 bigdata03
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><blockquote><p>在这里同样建议在windows 上配置host,主机ip映射 C:\Windows\System32\drivers\etc\host 在文件末尾直接添加 主机ip映射</p></blockquote></li> <li><p>集群节点之间的时间同步</p> <p>集群只要涉及到多个节点的就需要对这些节点做时间同步，如果节点之间时间不同步相差太多，会影响集群的稳定性，甚至导致集群出问题。</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 在bigdata01 上配置时间同步</span>
+<span class="token punctuation">[</span>root@bigdata01 ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/crontab</span>
+<span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>/bin/bash
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/sbin:/bin:/usr/sbin:/usr/bin
+<span class="token assign-left variable">MAILTO</span><span class="token operator">=</span>root
+
+<span class="token comment"># For details see man 4 crontabs</span>
+
+<span class="token comment"># Example of job definition:</span>
+<span class="token comment"># .---------------- minute (0 - 59)</span>
+<span class="token comment"># |  .------------- hour (0 - 23)</span>
+<span class="token comment"># |  |  .---------- day of month (1 - 31)</span>
+<span class="token comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span>
+<span class="token comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span>
+<span class="token comment"># |  |  |  |  |</span>
+<span class="token comment"># *  *  *  *  * user-name  command to be executed</span>
+<span class="token comment"># 配置时间同步,每分钟执行一次</span>
+* * * * * root /usr/sbin/ntpdate <span class="token parameter variable">-u</span> ntp.sjtu.edu.cn
+You have new mail <span class="token keyword">in</span> /var/spool/mail/root
+<span class="token comment"># 在bigdata02 上配置时间同步</span>
+<span class="token punctuation">[</span>root@bigdata02 ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/crontab</span>
+<span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>/bin/bash
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/sbin:/bin:/usr/sbin:/usr/bin
+<span class="token assign-left variable">MAILTO</span><span class="token operator">=</span>root
+
+<span class="token comment"># For details see man 4 crontabs</span>
+
+<span class="token comment"># Example of job definition:</span>
+<span class="token comment"># .---------------- minute (0 - 59)</span>
+<span class="token comment"># |  .------------- hour (0 - 23)</span>
+<span class="token comment"># |  |  .---------- day of month (1 - 31)</span>
+<span class="token comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span>
+<span class="token comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span>
+<span class="token comment"># |  |  |  |  |</span>
+<span class="token comment"># *  *  *  *  * user-name  command to be executed</span>
+<span class="token comment"># 配置时间同步,每分钟执行一次</span>
+* * * * * root /usr/sbin/ntpdate <span class="token parameter variable">-u</span> ntp.sjtu.edu.cn
+You have new mail <span class="token keyword">in</span> /var/spool/mail/root
+<span class="token comment"># 在bigdata03 上配置时间同步</span>
+<span class="token punctuation">[</span>root@bigdata03 ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/crontab</span>
+<span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span>/bin/bash
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/sbin:/bin:/usr/sbin:/usr/bin
+<span class="token assign-left variable">MAILTO</span><span class="token operator">=</span>root
+
+<span class="token comment"># For details see man 4 crontabs</span>
+
+<span class="token comment"># Example of job definition:</span>
+<span class="token comment"># .---------------- minute (0 - 59)</span>
+<span class="token comment"># |  .------------- hour (0 - 23)</span>
+<span class="token comment"># |  |  .---------- day of month (1 - 31)</span>
+<span class="token comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span>
+<span class="token comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span>
+<span class="token comment"># |  |  |  |  |</span>
+<span class="token comment"># *  *  *  *  * user-name  command to be executed</span>
+<span class="token comment"># 配置时间同步,每分钟执行一次</span>
+* * * * * root /usr/sbin/ntpdate <span class="token parameter variable">-u</span> ntp.sjtu.edu.cn
+You have new mail <span class="token keyword">in</span> /var/spool/mail/root
+<span class="token punctuation">[</span>root@bigdata03 ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><blockquote><p>默认是没有ntpdate命令的，需要使用yum在线安装，执行命令 <code>yum install -y ntpdate</code>ntp.sjtu.edu.cn 指的是ntp服务器，yintp服务器进行时间校准,常见的ntp服务器地址 https://blog.csdn.net/weixin_42588262/article/details/82501488</p></blockquote></li> <li><p>SSH免密码登录</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 将bigdata01 的公钥信息拷贝到bigdata02 bigdata03</span>
+<span class="token punctuation">[</span>root@bigdata01 ~<span class="token punctuation">]</span><span class="token comment"># scp ~/.ssh/authorized_keys bigdata02:~/</span>
+<span class="token punctuation">[</span>root@bigdata01 ~<span class="token punctuation">]</span><span class="token comment"># scp ~/.ssh/authorized_keys bigdata03:~/</span>
+<span class="token comment"># 添加到指定文件夹</span>
+<span class="token punctuation">[</span>root@bigdata02 ~<span class="token punctuation">]</span><span class="token comment"># cat ~/authorized_keys &gt;&gt; ~/.ssh/authorized_keys</span>
+<span class="token punctuation">[</span>root@bigdata03 ~<span class="token punctuation">]</span><span class="token comment"># cat ~/authorized_keys &gt;&gt; ~/.ssh/authorized_keys</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>安装Hadoop</p> <p>在这里只需要在bigdata01上安装就可以，后续将修改好配置的安装包拷贝到其他两个从节点，先创建安装目录 /data/soft,在/data/soft目录下进行解压</p> <p><strong>修改配置文件</strong></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 1.修改 hadoop-env.sh 文件 在文件末尾增加环境变量信息</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/data/soft/hadoop-3.2.0/etc/hadoop
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi hadoop-env.sh </span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/data/soft/jdk1.8 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HADOOP_LOG_DIR</span><span class="token operator">=</span>/data/hadoop_repo/logs/hadoop
+<span class="token comment"># 2.修改core-site.xml 文件 注意fs.defaultFS属性中的主机名需要和主节点的主机名保持一致</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi core-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>fs.defaultFS<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>hdfs://bigdata01:900<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>/value<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>hadoop.tmp.dir<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>/data/hadoop_repo<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 3.修改 hdfs-site.xml 文件 把hdfs中文件副本的数量设置为2，最多为2，因为现在集群中有两个从节点，还有secondaryNamenode进程所在的节点信息</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi hdfs-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>dfs.replication<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/value<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>dfs.namenode.secondary.http-address<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>bigdata01:5009<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>/value<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+    <span class="token comment"># 这个设置的dfs 身份验证</span>
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>dfs.permissions.enabled<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>false<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 4.修改 mapred-site.xml，设置mapreduce使用的资源调度框架</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi mapred-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>mapreduce.framework.name<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>yarn<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 5.修改yarn-site.xml，设置yarn上支持运行的服务和环境变量白名单,注意，针对分布式集群在这个配置文件中还需要设置resourcemanager的hostname，否则nodemanager找不到resourcemanager节点。</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi yarn-site.xml</span>
+<span class="token punctuation">..</span>.
+<span class="token operator">&lt;</span>configuration<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>yarn.nodemanager.aux-services<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>mapreduce_shuffle<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span> 
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>yarn.nodemanager.env-whitelist<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME<span class="token operator">&lt;</span>/value<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>property<span class="token operator">&gt;</span> 
+        <span class="token operator">&lt;</span>name<span class="token operator">&gt;</span>yarn.resourcemanager.hostname<span class="token operator">&lt;</span>/name<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>value<span class="token operator">&gt;</span>bigdata0<span class="token operator"><span class="token file-descriptor important">1</span>&lt;</span>/value<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/property<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>/configuration<span class="token operator">&gt;</span>
+<span class="token comment"># 6.修改 workers,把从节点名称加上</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># vi workers</span>
+bigdata02
+bigdata03
+<span class="token comment"># 7.修改启动脚本 修改start-dfs.sh，stop-dfs.sh这两个脚本文件，在文件前面增加如下内容</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># cd /data/soft/hadoop-3.2.0/sbin [root@bigdata01 sbin]# vi start-dfs.sh </span>
+<span class="token assign-left variable">HDFS_DATANODE_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HDFS_DATANODE_SECURE_USER</span><span class="token operator">=</span>hdfs 
+<span class="token assign-left variable">HDFS_NAMENODE_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HDFS_SECONDARYNAMENODE_USER</span><span class="token operator">=</span>root 
+<span class="token punctuation">[</span>root@bigdata01 sbin<span class="token punctuation">]</span><span class="token comment"># vi stop-dfs.sh </span>
+<span class="token assign-left variable">HDFS_DATANODE_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HDFS_DATANODE_SECURE_USER</span><span class="token operator">=</span>hdfs 
+<span class="token assign-left variable">HDFS_NAMENODE_USER</span><span class="token operator">=</span>root 
+<span class="token assign-left variable">HDFS_SECONDARYNAMENODE_USER</span><span class="token operator">=</span>root
+<span class="token comment"># 8.修改start-yarn.sh，stop-yarn.sh这两个脚本文件，在文件前面增加如下内容</span>
+<span class="token punctuation">[</span>root@bigdata01 sbin<span class="token punctuation">]</span><span class="token comment"># vi start-yarn.sh </span>
+<span class="token assign-left variable">YARN_RESOURCEMANAGER_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HADOOP_SECURE_DN_USER</span><span class="token operator">=</span>yarn 
+<span class="token assign-left variable">YARN_NODEMANAGER_USER</span><span class="token operator">=</span>root 
+<span class="token punctuation">[</span>root@bigdata01 sbin<span class="token punctuation">]</span><span class="token comment"># vi stop-yarn.sh </span>
+<span class="token assign-left variable">YARN_RESOURCEMANAGER_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">HADOOP_SECURE_DN_USER</span><span class="token operator">=</span>yarn 
+<span class="token assign-left variable">YARN_NODEMANAGER_USER</span><span class="token operator">=</span>root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br></div></div></li> <li><p>将bigdata01节点上修改好配置的安装包拷贝到其他两个从节点</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata01 sbin<span class="token punctuation">]</span><span class="token comment"># cd /data/soft/ </span>
+<span class="token punctuation">[</span>root@bigdata01 soft<span class="token punctuation">]</span><span class="token comment"># scp -rq hadoop-3.2.0 bigdata02:/data/soft/ </span>
+<span class="token punctuation">[</span>root@bigdata01 soft<span class="token punctuation">]</span><span class="token comment"># scp -rq hadoop-3.2.0 bigdata03:/data/soft/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>在bigdata01上格式化HDFS</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata01 soft<span class="token punctuation">]</span><span class="token comment"># cd /data/soft/hadoop-3.2.0 </span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># bin/hdfs namenode -format</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>注意如果格式化失败可以查看日志文件<code>/data/hadoop_repo/logs/hadoop</code> 格式化通常只建议做一次，如果需要进行多次执行，删除日志目录,执行命令 <code>rm -rf /data/hadoop_repo</code></p></blockquote></li> <li><p>启动集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata01 hadoop<span class="token punctuation">]</span><span class="token comment"># cd /data/soft/hadoop-3.2.0</span>
+<span class="token comment"># 启动hadoop 集群</span>
+<span class="token punctuation">[</span>root@bigdata01 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># sbin/start-all.sh</span>
+Starting namenodes on <span class="token punctuation">[</span>bigdata01<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">13</span>:07:53 CST <span class="token number">2022</span> from <span class="token number">192.168</span>.35.1 on pts/0
+Starting datanodes
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:15:31 CST <span class="token number">2022</span> on pts/0
+Starting secondary namenodes <span class="token punctuation">[</span>bigdata01<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:15:33 CST <span class="token number">2022</span> on pts/0
+Starting resourcemanager
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:15:37 CST <span class="token number">2022</span> on pts/0
+Starting nodemanagers
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:15:42 CST <span class="token number">2022</span> on pts/0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li> <li><p>验证集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata01 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">31797</span> NameNode
+<span class="token number">32634</span> Jps
+<span class="token number">32059</span> SecondaryNameNode
+<span class="token number">32300</span> ResourceManager
+<span class="token punctuation">[</span>root@bigdata02 ~<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">28307</span> Jps
+<span class="token number">28181</span> NodeManager
+<span class="token number">28071</span> DataNode
+<span class="token punctuation">[</span>root@bigdata03 ~<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">28374</span> Jps
+<span class="token number">28249</span> NodeManager
+<span class="token number">28139</span> DataNode
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>此外通过web ui 也可以验证安装是否成功</p> <p>HDFS webui界面：
+http://bigdata01:9870</p> <p><img src="/blog/Hadoop%E7%94%9F%E6%80%81%E4%BD%93%E7%B3%BB.assets/image-20220107142003369.png" alt="image-20220107142003369"></p> <p>YARN webui界面：
+http://bigdata01:8088</p> <p><img src="/blog/Hadoop%E7%94%9F%E6%80%81%E4%BD%93%E7%B3%BB.assets/image-20220107142111866.png" alt="image-20220107142111866"></p></li> <li><p>停止集群</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token punctuation">[</span>root@bigdata01 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># sbin/stop-all.sh </span>
+Stopping namenodes on <span class="token punctuation">[</span>bigdata01<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:15:44 CST <span class="token number">2022</span> on pts/0
+Stopping datanodes
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:21:59 CST <span class="token number">2022</span> on pts/0
+Stopping secondary namenodes <span class="token punctuation">[</span>bigdata01<span class="token punctuation">]</span>
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:22:01 CST <span class="token number">2022</span> on pts/0
+Stopping nodemanagers
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:22:03 CST <span class="token number">2022</span> on pts/0
+Stopping resourcemanager
+Last login: Fri Jan  <span class="token number">7</span> <span class="token number">14</span>:22:06 CST <span class="token number">2022</span> on pts/0
+You have new mail <span class="token keyword">in</span> /var/spool/mail/root
+<span class="token punctuation">[</span>root@bigdata01 hadoop-3.2.0<span class="token punctuation">]</span><span class="token comment"># jps</span>
+<span class="token number">33389</span> Jps
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li></ol></li></ol> <h3 id="_1-3-hadoop客户端节点"><a href="#_1-3-hadoop客户端节点" class="header-anchor">#</a> 1.3 Hadoop客户端节点</h3> <p>建议在业务机器上安装Hadoop，只需要保证业务机器上的Hadoop的配置和集群中的配置保持一致即可，这样就可以在业务机器上操作Hadoop集群了，此机器就称为是Hadoop的客户端节点。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/handbook/bigdata/hdfs.html">
+          第二章 HDFS
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-7115df4a data-v-1c636796><li class="level-2" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-1-hadoop-简介" class="sidebar-link reco-side-_1-1-hadoop-简介" data-v-7115df4a>1.1 Hadoop 简介</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-1-1-hadoop-版本" class="sidebar-link reco-side-_1-1-1-hadoop-版本" data-v-7115df4a>1.1.1 Hadoop 版本</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-1-2-hadoop3-x的细节变化" class="sidebar-link reco-side-_1-1-2-hadoop3-x的细节变化" data-v-7115df4a>1.1.2 Hadoop3.x的细节变化</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-1-3-常见的hadoop发行版本" class="sidebar-link reco-side-_1-1-3-常见的hadoop发行版本" data-v-7115df4a>1.1.3 常见的Hadoop发行版本</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-1-4-hadoop-三大核心组件" class="sidebar-link reco-side-_1-1-4-hadoop-三大核心组件" data-v-7115df4a>1.1.4 Hadoop 三大核心组件</a></li><li class="level-2" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-2-hadoop-安装" class="sidebar-link reco-side-_1-2-hadoop-安装" data-v-7115df4a>1.2 Hadoop 安装</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-2-1-hadoop集群的进程" class="sidebar-link reco-side-_1-2-1-hadoop集群的进程" data-v-7115df4a>1.2.1 Hadoop集群的进程</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-2-1-伪分布式集群安装" class="sidebar-link reco-side-_1-2-1-伪分布式集群安装" data-v-7115df4a>1.2.1 伪分布式集群安装</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-2-2-分布式集群安装" class="sidebar-link reco-side-_1-2-2-分布式集群安装" data-v-7115df4a>1.2.2  分布式集群安装</a></li><li class="level-3" data-v-7115df4a><a href="/blog/handbook/bigdata/hadoop.html#_1-3-hadoop客户端节点" class="sidebar-link reco-side-_1-3-hadoop客户端节点" data-v-7115df4a>1.3 Hadoop客户端节点</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-65133105 data-v-65133105><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-65133105><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-65133105></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-65133105></path></svg></div><canvas id="vuepress-canvas-cursor"></canvas><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:50px;bottom:-70px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div></div></div>
+    <script src="/blog/assets/js/app.610bec8c.js" defer></script><script src="/blog/assets/js/3.1aae9359.js" defer></script><script src="/blog/assets/js/1.ae8a88ec.js" defer></script><script src="/blog/assets/js/43.756910ba.js" defer></script>
+  </body>
+</html>
